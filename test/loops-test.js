@@ -1,4 +1,5 @@
 /*global describe, it*/
+'use strict';
 
 const chai = require('chai')
 const fs = require('fs')
