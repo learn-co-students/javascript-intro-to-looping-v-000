@@ -15,10 +15,12 @@ function whileLoop(number) {
 }
 
 function doWhileLoop(array) {
+  function maybeTrue() {
+  return Math.random() >= 0.5
+}
 
-
-do {
-  array.splice(0, 1);
-} while (array.length > 0);
-return array;
+  do {
+    array = array.splice(1)
+  } while (array.length > 0 && maybeTrue());
+  return array;
 }
