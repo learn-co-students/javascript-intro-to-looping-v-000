@@ -1,34 +1,25 @@
-'use strict';
-
-function loopExcitement(sentences){
-  var sentences = [];
-
-  for(var i = 50; i < 75; i++){
-    sentences.push("i am looping");
+function forLoop(array) {
+  for (let i = 0; i < 25; i++){
+    array.push("I am ${i} strange loop${i === 0 ? '' : 's'}.");
   }
-
-  return sentences;
+  return array;
 }
 
-function loopingFun(){
-
-   var i = 10; 
-   var num; 
-   while(i < 17){
-      num = i; 
-      i++;
-   }
-
-   return num;
+function whileLoop(number) {
+  while (number > 0) {
+    console.log(--number);
+  }
+  return 'done';
 }
 
-function alwaysLooping(num){
- var love = [];
+function maybeTrue() {
+  return Math.random() >= 0.5
+}
 
-  do{
-    love.push("JavaScript");
-    num++;
-  }while(num < 10);
+function doWhileLoop(array) {
 
-  return love;
+  do {
+    array.pop()
+  } while (maybeTrue() || array.length > 0);
+  return array;
 }
