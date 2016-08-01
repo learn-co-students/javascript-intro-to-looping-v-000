@@ -15,11 +15,11 @@ function whileLoop(num) {
   return "done"
 }
 
-function doWhileLoop(array) {
-  
-  function maybeTrue() {
+ function maybeTrue() {
     return Math.random() >= 0.5
   }
+
+function doWhileLoop(array) {
 
   do {
     array.pop()
