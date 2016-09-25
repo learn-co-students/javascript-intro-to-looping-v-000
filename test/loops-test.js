@@ -11,6 +11,7 @@ chai.use(spies)
 const expect = chai.expect
 
 function makeArray() {
+  
   const array = []
   const t = Math.floor(Math.random() * 10)
 
@@ -28,6 +29,7 @@ describe('loops', () => {
 
   describe('forLoop(array)', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
+
       const [array, t] = makeArray()
       const strangeArray = forLoop(array)
 
