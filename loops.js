@@ -23,7 +23,8 @@ function doWhileLoop(array) {
   }
 
   do {
-    array.splice(0,1);
+    array = array.splice(1);
+    // array = array.slice(1); or array.splice(0,1);
   } while (array.length > 0 && maybeTrue());
   return array;
 }
