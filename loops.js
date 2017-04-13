@@ -1,5 +1,5 @@
 function forLoop(array) {
-  for (let i = 0, i < 25, i++) {
+  for (let i = 0; i < 25; i++) {
     if (i === 1) {
     array.push(`I am ${i} strange loop.`);
   } else {
@@ -21,7 +21,7 @@ function doWhileLoop(array) {
     return Math.random() >= 0.5
   }
 
-  do {array.slice(1)
+  do {array.pop()
   } while (array.length === 0 || maybeTrue());
   return array
 }
