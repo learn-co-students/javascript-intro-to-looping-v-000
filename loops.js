@@ -18,9 +18,8 @@ function maybeTrue() {
 }
 
 function doWhileLoop(array){
-  array.pop
   do {
-    array.pop
+    array = array.slice(1)
   } while (array.length > 0 && maybeTrue())
   return array
 }
