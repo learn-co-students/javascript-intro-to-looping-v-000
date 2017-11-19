@@ -1,4 +1,5 @@
 /*global describe, it*/
+'use strict';
 
 const chai = require('chai')
 const fs = require('fs')
@@ -28,6 +29,8 @@ describe('loops', () => {
 
   describe('forLoop(array)', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
+      'use strict';
+
       const [array, t] = makeArray()
       const strangeArray = forLoop(array)
 
