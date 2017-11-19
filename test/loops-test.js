@@ -14,7 +14,7 @@ function makeArray() {
   const array = []
   const t = Math.floor(Math.random() * 10)
 
-  for (let i = 0; i < t; i++) {
+  for (var i = 0; i < t; i++) {
     array.push("I am a strange loop.")
   }
 
@@ -28,15 +28,16 @@ describe('loops', () => {
 
   describe('forLoop(array)', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
-      const [array, t] = makeArray()
+      const madeArray = makeArray()
+      const array= madeArray[0], t= madeArray[1]
       const strangeArray = forLoop(array)
 
       expect(strangeArray.length).to.equal(t + 25)
 
       const testArray = strangeArray.slice(array.length)
 
-      for (let i = 0, l = testArray.length; i < l; i++) {
-        let s = i === 1 ? "I am 1 strange loop." : `I am ${i} strange loops.`
+      for (var i = 0, l = testArray.length; i < l; i++) {
+        var s = i === 1 ? "I am 1 strange loop." : `I am ${i} strange loops.`
         expect(testArray[i]).to.equal(s)
       }
     })
@@ -56,7 +57,8 @@ describe('loops', () => {
 
   describe('doWhileLoop(array)', () => {
     it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
-      const [array, t] = makeArray()
+      const madeArray = makeArray()
+      const array= madeArray[0], t= madeArray[1]
       const l = array.length
 
       const newArray = doWhileLoop(array)
